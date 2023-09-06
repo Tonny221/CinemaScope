@@ -3,15 +3,19 @@ import Image from "next/image";
 type MovieProps = {
   title: string;
   image: string;
+  size : {
+    width: number
+    heigth: number
+  }
   alt: string;
   year: number;
 };
 
-const MovieCard = ({ title, image, alt, year }: MovieProps) => {
+const MovieCard = ({ title, image, alt, year, size }: MovieProps) => {
   return (
-    <div className="border-2 border-black my-4 rounded-2xl w-fit p-4 mx-auto">
-      <h1 className="text-center text-bold text-xl">{title}</h1>
-      <Image className="my-0 mx-auto" src={image} alt={alt} width={200} height={200} priority />
+    <div className="border-2 border-black my-4 rounded-2xl w-4/5 p-4 mx-auto">
+      <h1 className="text-center font-bold uppercase">{title}</h1>
+      <Image className="my-0 mx-auto" src={image} alt={alt} width={size.width} height={size.heigth} priority />
       <p className="text-center">{year}</p>
     </div>
   );

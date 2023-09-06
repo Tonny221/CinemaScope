@@ -21,8 +21,16 @@ const MoviesSection = () => {
             key={el.titleText.text}
             title={el.titleText.text}
             image={el.primaryImage?.url ? el.primaryImage?.url : ""}
-            alt={el.primaryImage?.caption.plainText ? el.primaryImage?.caption.plainText : ""}
+            alt={
+              el.primaryImage?.caption.plainText
+                ? el.primaryImage?.caption.plainText
+                : ""
+            }
             year={el.releaseYear.year}
+            size={{
+              width: el.primaryImage?.width ? el.primaryImage?.width : 200,
+              heigth: el.primaryImage?.height ? el.primaryImage?.height : 300,
+            }}
           />
         );
       })}
