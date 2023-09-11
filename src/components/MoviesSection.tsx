@@ -14,7 +14,7 @@ const MoviesSection = () => {
   if (error) return "An error has occurred: " + error;
 
   return (
-    <section className="grid grid-cols-3">
+    <section className="md:grid md:grid-cols-3">
       {data?.results.map((el) => {
         return (
           <MovieCard

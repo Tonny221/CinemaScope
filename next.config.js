@@ -1,13 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    typedRoutes: true,
+  },
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'm.media-amazon.com'
-      }
-    ]
-  }
+        protocol: "https",
+        hostname: "m.media-amazon.com",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
