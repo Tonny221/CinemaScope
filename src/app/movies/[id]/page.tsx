@@ -1,11 +1,5 @@
-type Params = {
-    slug: string
-}
+const page = ({ params }: { params: { id: string } }) => {
+  return <div>My id: {params.id}</div>;
+};
 
-const page = (props: Params) => {
-  return (
-    <div>My slug: {props.slug}</div>
-  )
-}
-
-export default page
+export default page;
