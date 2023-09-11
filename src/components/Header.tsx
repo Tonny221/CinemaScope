@@ -2,10 +2,10 @@ import Link from "next/link"
 
 const Header = () => {
   return (
-    <header className="flex justify-center md:justify-between px-16 py-4 bg-primary">
+    <header className="flex justify-center md:justify-between px-16 py-4">
         <nav className="md:flex gap-4 hidden">
-            <Link href={'/'} className="text-secondary hover:underline">Home</Link>
-            <Link href={'/movies'} className="text-secondary hover:underline">Movies</Link>
+            <Link href={'/'} className="hover:underline">Home</Link>
+            <Link href={'/movies'} className="hover:underline">Movies</Link>
         </nav>
         <div className="hidden md:block">
             something here
